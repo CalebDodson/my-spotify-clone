@@ -11,6 +11,9 @@
 body {
   background-color: var(--black);
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
 }
 a {
   font-size: var(--normalFont);
@@ -20,10 +23,18 @@ a {
 a:visited {
   color: white;
 }
+.button {
+  
+}
+.white {
+  background-color: white;
+  color: var(--black);
+}
 #navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 72px;
 }
 #navbar ul {
   display: flex;
@@ -32,16 +43,50 @@ a:visited {
 }
 #navbar img {
   height: 60px;
+  vertical-align: middle;
+}
+.searchContainer {
+  position: relative;
+  display: inline-block;
 }
 .search {
   font-size: var(--normalFont);
   height: 60px;
   border-radius: 30px;
-  padding-left: 24px;
+  padding-left: 48px;
   background-color: var(--lightblack);
   color: white;
   border:none;
+  outline: none;
 }
 .search::placeholder {
   color: var(--lightgrey);
+}
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--lightgrey)
+}
+#loginComponent {
+  background-color: var(--black);
+}
+#homeComponent {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 88px);
+  padding: 8px;
+  gap: 8px;
+}
+#libraryComponent {
+  background-color: var(--lightblack);
+  border-radius: 8px;
+  height: 100%;
+  min-width: 530px;
+}
+#popularComponent {
+  background-color: var(--lightblack);
+  border-radius: 8px;
+  width: 100%;
 }
