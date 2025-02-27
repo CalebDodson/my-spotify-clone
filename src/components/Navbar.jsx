@@ -26,7 +26,7 @@ function Navbar() {
             <li>
                 <Link 
                     to="/signup"
-                    className="button"
+                    className="button navbarLink"
                     style={{ color: "white" }}
                 >
                     Sign up
@@ -35,7 +35,7 @@ function Navbar() {
             <li>
                 <Link 
                     to="/login" 
-                    className="button white"
+                    className="button white navbarLink"
                 >
                     Log in
                 </Link>

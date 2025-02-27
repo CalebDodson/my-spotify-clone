@@ -15,10 +15,6 @@ body {
   padding: 0;
   color: white;
 }
-a {
-  font-size: var(--normalFont);
-  text-decoration: none;
-}
 .button {
   display: inline-block;
   line-height: 60px;
@@ -38,6 +34,13 @@ a {
   flex-direction: row;
   align-items: center;
   height: 72px;
+}
+.navbarLink {
+  font-size: var(--normalFont);
+  text-decoration: none;
+}
+.navbarLink:active, .navbarLink:focus {
+  color: var(--black)
 }
 #navbar ul {
   display: flex;
@@ -92,4 +95,12 @@ a {
   background-color: var(--lightblack);
   border-radius: 8px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.popularLink {
+  text-decoration: none;
+}
+.popularLink:hover {
+  text-decoration: underline;
 }
