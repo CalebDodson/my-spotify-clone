@@ -14,13 +14,18 @@ function Login() {
                 <input 
                     type="text"
                     placeholder="Email or Username"
+                    className="formInput"
                 />
             </label>
             <input 
                 type="submit"
                 value="Continue"
+                className="button green"
             />
         </form>
+        <div>
+            Don't have an account? <Link to="/signup" style={{color: "white"}}>Sign up for Spotify</Link>
+        </div>
     </div>
   )
 }

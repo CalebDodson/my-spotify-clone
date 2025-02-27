@@ -15,6 +15,14 @@ body {
   padding: 0;
   color: white;
 }
+.formInput {
+  background: none;
+  border: 1px solid var(--lightgrey);
+  border-radius: 5px;
+  height: 60px;
+  color: white;
+  padding-left: 12px;
+}
 .button {
   display: inline-block;
   line-height: 60px;
@@ -22,6 +30,10 @@ body {
   border-radius: 30px;
   padding-left: 24px;
   padding-right: 24px;
+  border: none;
+}
+.button:hover {
+  cursor: pointer;
 }
 .button:active, .button:focus {
   color: var(--black)
@@ -29,18 +41,23 @@ body {
 .white {
   background-color: white;
 }
+.green {
+  background-color: var(--green);
+}
 #navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 72px;
+  gap: 10px;
+  padding-left: 24px;
 }
 .navbarLink {
   font-size: var(--normalFont);
   text-decoration: none;
 }
 .navbarLink:active, .navbarLink:focus {
-  color: var(--black)
+  color: var(--black);
 }
 #navbar ul {
   display: flex;
@@ -60,6 +77,7 @@ body {
   height: 60px;
   border-radius: 30px;
   padding-left: 48px;
+  padding-right: 32px;
   background-color: var(--lightblack);
   color: white;
   border:none;
@@ -75,8 +93,38 @@ body {
   transform: translateY(-50%);
   color: var(--lightgrey)
 }
+#signupComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#signupComponent img {
+  height: 60px;
+}
+#signupComponent form {
+  display: flex;
+  flex-direction: column;
+}
+#signupComponent label {
+  display: flex;
+  flex-direction: column;
+}
 #loginComponent {
   background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#loginComponent img {
+  height: 60px;
+}
+#loginComponent form {
+  display: flex;
+  flex-direction: column;
+}
+#loginComponent label {
+  display: flex;
+  flex-direction: column;
 }
 #homeComponent {
   display: flex;
