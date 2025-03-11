@@ -16,6 +16,7 @@ model User {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   library   Library[]
+  listens   Listen[]
 }
 
 model Album {
@@ -41,6 +42,7 @@ model Song {
   userId      Int
   user        User      @relation(fields: [userId], references: [id])
   libraries   Library[]
+  listens     Listen[]
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 }
@@ -54,3 +56,12 @@ model Library {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 }
+
+model Listen {
+  id        Int       @id @default(autoincrement())
+  userId    Int
+  songId    Int 
+  timestamp DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id])
+  song      Song      @relation(fields: [songId], references: [id])
+} 
