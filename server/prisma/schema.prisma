@@ -12,6 +12,7 @@ model User {
   username  String    @unique
   email     String    @unique
   password  String
+  songs     Song[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
   library   Library[]
@@ -29,16 +30,17 @@ model Album {
 }
 
 model Song {
-  id          Int       @id @default(autoincrement*)
+  id          Int       @id @default(autoincrement())
   title       String    
   artist      String
   albumId     Int
-  albumId     Album     @relation(fields: [albumId], references: [id])
+  album       Album     @relation("AlbumSongs", fields: [albumId], references: [id])
   genre       String
   releaseDate DateTime
   url         String
   userId      Int
   user        User      @relation(fields: [userId], references: [id])
+  libraries   Library[]
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 }
